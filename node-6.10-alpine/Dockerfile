@@ -7,7 +7,7 @@ COPY repositories /etc/apk/repositories
 RUN \
 echo -e 'http://dl-cdn.alpinelinux.org/alpine/edge/main\nhttp://dl-cdn.alpinelinux.org/alpine/edge/community\nhttp://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
 apk --no-cache --update add yarn dumb-init && \
-rm -rf /var/cache/apk* /tmp && \
+rm -rf /var/cache/apk/* /tmp && \
 mkdir /tmp && \
 chmod 777 /tmp
 
